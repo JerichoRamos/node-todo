@@ -9,7 +9,7 @@ const db = client.db('TodoApp');
     if (err) {
         return console.log('Unable to connect to MongoDB server');
     }
-    console.log('Connected to MongoDB server');
+    // console.log('Connected to MongoDB server');
 
     // Find '5c4fa4be79e98027e03388ad' in Robomongo (Todos)
     // db.collection('Todos').find({
@@ -33,6 +33,7 @@ const db = client.db('TodoApp');
 
 
     // COUNT EVERY DOCS. IN MONGODB
+    // TODOs
     // if (err) {
     //     return console.log('Unable to connect to MongoDB server');
     // }
@@ -44,9 +45,17 @@ const db = client.db('TodoApp');
     //     console.log('Unable to fetch todos', err);
     // });
 
+    // USERs
+    // if (err) {
+    //     return console.log('Unable to connect to MongoDB server');
+    // }
+    // console.log('Connected to MongoDB server');
 
+    // db.collection('Users').find().count().then((count) => {
+    //     console.log(`Users count: ${count}`);
+    // }, (err) => {
+    //     console.log('Unable to fetch users', err);
+    // });
 
-
-
-// client.close();  
+    // client.close();  
 });

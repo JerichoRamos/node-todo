@@ -21,7 +21,7 @@ MongoClient.connect("mongodb://localhost:27017//TodoApp",{ useNewUrlParser: true
     // });
 
 
-    // Insert new doc into Users (name, age, location)
+    //Insert new doc into Users (name, age, location)
     // db.collection('Users').insertOne({
     //     name: 'Arsha',
     //     age: 20,
@@ -31,7 +31,7 @@ MongoClient.connect("mongodb://localhost:27017//TodoApp",{ useNewUrlParser: true
     //         return console.log('Unable to insert user', err);
     //     }
     //     console.log(result.ops)[0]._id.getTimestamp();
-    // })
+    // });
 
-   client.close(); 
+    // client.close();
 });
