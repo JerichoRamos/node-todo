@@ -30,11 +30,11 @@ MongoClient.connect("mongodb://localhost:27017//TodoApp",{ useNewUrlParser: true
             $set: {                     // set new data
                 name: 'Dahyun'                            
             },
-            $inc: {
-                age: -1
+            $inc: {                     // increment age by 1
+                age: 1
             }
         }, {
-            returnOriginal: 'Ashe'      // original data
+            returnOriginal: 'Ashe'      // original data 
         }).then((result) => {
             console.log(result);
         });
