@@ -8,7 +8,9 @@ beforeEach((done) => {
     Todo.deleteMany({}).then(() => done());
 });
 
-describe('POST /todos', () => {
+describe('POST /todos', () => { 
+    
+    // 1st POST
     it('should create a new todo', (done) => {
         var text = "Dahyunnie";
     
@@ -32,6 +34,7 @@ describe('POST /todos', () => {
         });
     });
 
+    // 2nd POST
     it('should not create todo with invalid body data', (done) => {
 
         request(app)
