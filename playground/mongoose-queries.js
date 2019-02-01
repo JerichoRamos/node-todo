@@ -40,6 +40,7 @@ var idUser = '5c51063b389d9e26189f1d19';
 // }).catch((e) => console.log('ERROR'));
 
 
+// Find id - Method #3 (USERs)
 User.findById(idUser).then((user) => {
     if (!user) {
       return console.log('Unable to find user');
