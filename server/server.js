@@ -1,9 +1,11 @@
 //import the express & bodyParser module
 const express = require('express');
-const _ = require('lodash');
 const bodyParser = require('body-parser');
+
 const {ObjectID} = require('mongodb');
 
+//import lodash module
+const _ = require('lodash');
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
@@ -94,7 +96,7 @@ app.patch('/todos/:id', (req,res) => {
       body.completedAt = null;
     }
 
-    Todo.findOneAndUpdate(id, {$set: body}, {new: true})
+    Todo.findByIdAndUpdate(id, {$set: body}, {new: true})
     .then((todo) => {
     if (!todo) {
       return res.status(404).send();
