@@ -1,3 +1,5 @@
+require('./config/config.js');
+
 //import the express & bodyParser module
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -14,7 +16,7 @@ var {User} = require('./models/user');
 var app = express();
 
 // use port to access heroku
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 
 app.use(bodyParser.json());
